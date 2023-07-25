@@ -1,0 +1,373 @@
+header {
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	display: block;
+	height: 563px/2218px*100%;
+	
+	.header-shop {
+		display: none;
+		width: 200px;
+		padding: 20px;
+		position: absolute;
+		background-color: #ffffff;
+		left: 75.06%;
+		top: 69px;
+		z-index: 3;
+		font-family: 'Montserrat-Regular', Arial, sans-serif;
+		box-shadow: 0px -2px 5px #282828FF;
+
+		.triagle {
+			position: absolute;
+			border: 7px solid transparent;
+			border-bottom: 8px solid white;
+			width: 11px;
+			top: -15px;
+			left: 71%;
+		}
+
+		.products-list {
+			width: 100%;
+			margin-bottom: 20px;
+
+			.p {
+				display: block;
+				width: 100%;
+				height: auto;
+				margin-bottom: 16px;
+
+				img {
+					display: inline-block;
+					max-width: 35px;
+				}
+				.info {
+					display: inline-block;
+					vertical-align: top;
+					padding: 2px 4px;
+
+					.Name_prod {
+						font-size: 9.5px;
+						letter-spacing: .1px;
+					}
+
+					.cost_x_count {
+						margin-top: 2.5px;
+						font-size: 10px;
+						margin-left: 1px;
+
+						.count {
+					
+						}
+
+						.cost {
+
+						}
+					}
+				}
+			}
+		}
+
+		hr {
+			display: block;
+			width: 100%;
+			border: 1px solid #e6e6e6;
+		}
+
+		.buy-menu {
+			margin-top: 10px;
+			h5  {
+				font-size: 10px;
+				.total {
+					text-transform: uppercase;
+					margin-left: 3px;
+					font-size: 12.5px;
+					font-weight: 1000;
+				}
+			}
+
+			form {
+				display: inline-block;
+				margin-top: 15px;
+				margin-left: 1px;
+
+				button {
+					width: 80px;
+					min-height: 32px;
+					background-color: #ffe400;
+					text-align: center;
+					font-size: 8.1px;
+					padding-top: 2px;
+					font-weight: 600;
+					text-transform: uppercase;
+
+					&:hover {
+						background-color: #282828FF;
+						color: white;
+					}
+				}
+			}
+
+			.view {
+				display: inline-block;
+				text-transform: uppercase;
+				background-color: rgba(0, 0, 0, 0);
+				color: #2297d8;
+				font-size: 10px;
+				margin-left: 19px;
+			}
+		}
+	}
+
+	.hat {
+		display: flex;
+		justify-content: space-between;
+		top: 20px;
+		height: 82px/826px*100%;
+
+		img {
+			display: inline-block;
+			width: 83px/1172px*100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+		.menu {
+			display: flex;
+			justify-content: space-between;
+
+			width: 203px/1172px*100%;
+			height: 22px/83px*100%;
+			margin-top: 22px/826px*100%;
+
+			button {
+				display: inline-block;
+				background-color: rgba(0,0,0,0);
+				
+				vertical-align: middle;
+				float: left;
+
+				cursor: pointer;
+
+				img {
+					width: auto;
+					height: 100%;
+				}
+
+				&.facebook {
+					width: 22px/220px*100%;
+					height: 22px/22px*100%;
+				}
+
+				&.Twitter {
+					margin-top: 2px;
+					height: 19px/22px*100%;
+					width: 22px/220px*100%;
+					margin-left: -4px;
+				}
+
+				&.shop {
+					height: 22px/22px*100%;
+					width: 21px/220px*100%;
+					margin-left: -1px;
+
+					img {
+						position: relative;
+						z-index: 2;
+					}
+
+					&:hover {
+						.amount_of_shop {
+							background-color: #363636;
+
+							.count {
+								color: #ffe400;
+							}
+						}
+					}
+
+					.amount_of_shop {
+						display: block;
+						position: absolute;
+						background-color: #ffe400;
+						width: 15px;
+						height: 11px;
+						top: -8px;
+						right: -12px;
+						z-index: 3;
+						transition: background-color .2s linear 0s;
+
+						.count {
+							font-family: "Montserrat-Bold", Arial, sans-serif;
+							font-weight: bolder;
+							font-size: 10px;
+							color: #363636;
+							margin-top: -.9px;
+							text-align: center;
+							transition: color .2s linear 0s;
+						}
+					}
+				}
+				
+				&.menu {
+					height: 22px/22px*100%;
+					width: 24px/220px*100%;
+					margin-top: -1px;
+				}
+			}
+		}
+	}
+
+	.grid {
+		display: grid;
+		width: 100%;
+		height: 824px/826px*100%;
+
+		grid-template-columns: repeat(4, 293px/1172px*100%);
+		grid-template-rows: repeat(2, 293px/826px*100%);
+
+		top: 159px/826px*100%;
+
+		.block1 {
+			
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			background-color: #ffe400;
+			padding: 24px 20px;
+
+			h1 {
+				font-size: 18px;
+				font-family: "Montserrat-Bold";
+				line-height: 130%;
+				letter-spacing: .3px;
+			}
+
+			hr {
+				height: 0px;
+				border: 1.7px solid #363636;
+				width: 27px;
+				margin-left: 1.5px;
+				margin-top: 5px;
+				background-color: #363636;
+			}
+
+			p {
+				font-family: "Montserrat-Regular";
+				font-size: 9px;
+				font-weight: bold;
+				margin-top: 12px;
+				margin-left: 1px;
+				letter-spacing: .35px; 
+				line-height: 150%;
+			}
+
+			button {
+				width: 70px/293px*100%;
+				height: 32px;
+				background-color: #363636;
+				margin-top: 26px;
+				color: white;
+				font-family: 'Montserrat-Regular';
+				font-size: 10px;
+				text-transform: uppercase;
+				font-weight: thin;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #fff;
+					color: #363636;
+				}
+			}
+		}
+
+		.block2 {
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 4;
+			grid-column-end: 5;
+
+			background-color: #ffffff;
+
+			img {
+				margin: 0 auto;
+				display: block;
+				width: 14px;
+
+				cursor: pointer;
+
+				&.right {
+					margin-top: 34px;
+					margin-left: auto+10%;
+				}
+
+				&.left {
+					margin-top: 26px;
+				}
+			}
+			
+			.f {
+				margin-top: 32px;
+				margin-left: 35%;
+				display: inline-block;
+				font-family: "Montserrat-Regular";
+				font-size: 24px;
+				letter-spacing: 5px;
+				font-weight: bolder;
+			}
+
+			.s {
+				font-family: "Montserrat-Regular";
+				display: inline-block;
+				font-size: 14px;
+				font-weight: bolder;
+				vertical-align: middle;
+				margin-top: -16px;
+				margin-left: -2px;
+			}
+
+			hr {
+				display: inline-block;
+				border: .5px solid #363636;
+				width: 16px;
+				transform: rotate(-65deg);
+				vertical-align: middle;
+				margin-top: -15px;
+				margin-left: -6px;
+			}
+		}
+
+		.block3 {
+			grid-row-start: 2;
+			grid-row-end: 3;
+			grid-column-start: 3;
+			grid-column-end: 4;
+
+			background-color: #2297d8;
+				
+			.ellipse {
+				position: absolute;
+				width: 50px;
+				left: 38%;
+				top: 34%;
+			}
+
+			.play {
+				position: absolute;
+				left: 48%;
+				top: 42%;		
+				width: 15px;
+				cursor: pointer;
+			}
+
+			p {
+				margin-top: 65%;
+				color: white;
+				text-transform: uppercase;
+				font-family: "Montserrat-Regular";
+				font-size: 8px;
+				text-align: center;
+				font-weight: bolder;
+			}
+		}
+	}
+}

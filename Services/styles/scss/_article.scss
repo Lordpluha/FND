@@ -1,0 +1,126 @@
+$m_h: 1600px*0.68255 !global;
+$c_w: 1920px*0.68255 !global;
+
+article {
+	display: grid;
+	width: 100%;
+
+	$a_h: 1172px*0.68255 !global;
+	height: $a_h/$m_h*100%;
+
+	background-color: #f5f5f5;
+
+	grid-template-rows:	repeat(4, 1rf);
+	grid-template-columns: repeat(4, 1fr);
+
+	@for $i from 1 through 16 {
+		.block_#{$i} {
+			background-color: #ffffff;
+			// Columnss sort
+			@if($i <= 16) {
+				grid-row-start: 4;
+				grid-row-end: 5;
+			} @if($i <= 12) {
+				grid-row-start: 3;
+				grid-row-end: 4;
+			} @if($i <= 8) {
+				grid-row-start: 2;
+				grid-row-end: 3;
+			} @if($i <= 4) {
+				grid-row-start: 1;
+				grid-row-end: 2;
+			} 
+			// Rows sort
+			@if($i % 2 == 1 or $i == 1) {
+				grid-column-start: 1;
+				grid-column-end: 2;
+			} @if($i % 2 == 0) {
+				grid-column-start: 2;
+				grid-column-end: 3;
+			} @if($i == 3 or $i == 7 or $i == 11 or $i == 15) {
+				grid-column-start: 3;
+				grid-column-end: 4;
+			} @if($i % 4 == 0) {
+				grid-column-start: 4;
+				grid-column-end: 5;
+			}
+		}
+	}
+
+	.block_2,
+	.block_5,
+	.block_7,
+	.block_10,
+	.block_13,
+	.block_15 {
+		background-color: #d7d7d7;
+
+		.nums {
+			position: absolute;
+			display: block;
+			background-color: #ffe400;
+			width: 71px*0.68255;
+			height: 71px*0.68255;
+			padding: 0;
+
+			h1 {
+				position: relative;
+				display: block;
+				font-family: 'Montserrat-Regular', Arial, sans-serif;
+				color: #363636;
+				padding: 0;
+				text-align: center;
+				margin: 20% auto;
+			}
+		}
+	}
+
+	.block_4,
+	.block_12 {
+		background-color: #2297d8;
+	}
+
+	.block_8,
+	.block_16 {
+		background-color: #ffe400;
+		transition: background-color .15s ease-in-out 0s;
+
+		&:hover {
+			background-color: #333538;
+		}
+	}
+	.block_5,
+	.block_7,
+	.block_13,
+	.block_15 {
+		.triagle {
+			position: absolute;
+			content: '';
+			border: 7px solid transparent;
+			border-bottom: 8px solid white;
+			width: 13px*0.68255;
+			left: 47%;
+			transform: rotate(180deg);
+			margin-top: -29px*0.68255;
+			padding: 0;
+		}
+	}
+
+	.block_2,
+	.block_10 {
+		.triagle {
+			position: absolute;
+			content: '';
+			border: 7px solid transparent;
+			border-bottom: 8px solid white;
+			width: 24px*0.68255;
+			left: 45%;
+			top: 93%;
+			padding: 0;
+		}
+	}
+
+	* {
+		padding: 29px*0.68255 30px*0.68255;
+	}
+}

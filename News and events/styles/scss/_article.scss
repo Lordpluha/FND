@@ -1,0 +1,266 @@
+$m_h: 1492px !global;
+$c_w: 1172px !global;
+
+article {
+	display: block;
+	width: 100%;
+
+	$a_h: 1200px !global;
+	height: $a_h/$m_h*100%;
+
+	
+	#content {
+		display: grid;
+
+		grid-template-rows: repeat(6, 2fr);
+		grid-template-columns: repeat(4, 1fr);
+		
+		height: 100%;
+		width: 100%;
+		
+		@for $a from 1 through 18 {
+			.block#{$a} {
+				display: block;
+				padding: 19px 0px 20px 21px;
+
+				// 3-e блоки из строк
+				@if( $a % 3 == 0 ) {
+					grid-column-start: 4;
+					grid-column-end: 5;
+					grid-row-start: $a/3;
+					grid-row-end: $a/3+1;
+					@if($a == 3) {
+						background-color: #282828;
+
+						img {
+							margin: 0 auto;
+							display: block;
+							width: 14px;
+
+							cursor: pointer;
+							
+							&.r {
+								margin-top: 17px;
+								margin-left: 40.5%;
+								&:hover {
+									display: none;
+
+									&.hover {
+										display: block;	
+									}
+								}
+							}
+
+							&.l {
+								margin-top: 26px;
+								margin-left: 41%;
+
+								&:hover {
+									display: none;
+									
+									&.hover {
+										display: block;	
+									}
+								}
+							}
+
+							&.hover {
+								display: none;	
+							}
+						}
+						
+						.f {
+							margin-top: 32px;
+							margin-left: 15%;
+							display: inline-block;
+							font-family: "Montserrat-Regular";
+							font-size: 24px;
+							letter-spacing: 1px;
+							font-weight: bolder;
+							color: #fff;
+						}
+
+						.s {
+							font-family: "Montserrat-Regular";
+							display: inline-block;
+							font-size: 15px;
+							font-weight: bolder;
+							vertical-align: middle;
+							margin-top: -17px;
+							margin-left: 1px;
+							color: #fff;
+						}
+
+						hr {
+							display: inline-block;
+							border: .5px solid #fff;
+							width: 16px;
+							transform: rotate(-65deg);
+							vertical-align: middle;
+							margin-top: -20px;
+							margin-left: 2px;
+						}
+
+					} @else if($a == 6 or $a == 12) {
+						background-color: #ffe400;
+						@if($a == 6) {
+							.hover {
+								display: none;
+							}
+							.noact {
+								display: block;
+							}
+							img {
+								max-width: 20.6%;
+								height: auto;
+								margin: 27.5% auto 0 34%;
+							}
+
+							p {
+								font-family: 'Montserrat-Regular', Arial, sans-serif;
+								text-transform: uppercase;
+								font-size: 8.5px;
+								margin-left: 21%;
+								font-weight: 1000;
+								margin-top: 6.5%;
+							}
+						} @else {
+							.hover {
+								display: none;
+							}
+							.noact {
+								display: block;
+							}
+							img {
+								max-width: 28%;
+								height: auto;
+								margin: 27.5% auto 0 29%;
+							}
+
+							p {
+								font-family: 'Montserrat-Regular', Arial, sans-serif;
+								text-transform: uppercase;
+								font-size: 8.5px;
+								margin-left: 25%;
+								font-weight: 1000;
+								margin-top: 5%;
+							}
+						}
+					} @else {
+						@if($a == 9) {
+							background-color: #2297d8;
+							padding: 16px 0 0 21px;
+
+							form {
+								h1 {
+									display: block;
+									color: #fff;
+									font-family: 'Montserrat-Regular', Arial, sans-serif;
+									text-transform: uppercase;
+									margin-left: 3px;
+									&:after {
+										content: "";
+										width: 27px;
+										background-color: #fff;
+										height: 3px;
+										display: block;
+										position: absolute;
+										margin-top: 9px;
+									}
+								}
+
+								input {
+									height: 32px;
+									margin-top: 55px;
+									width: 89%;
+									padding: 10px;
+									color: #2297d8;
+									font-family: 'Monserrat-Regular', Arial, sans-serif;
+									font-size: 10px;						
+			
+									&::placeholder {
+										color: #2297d8;
+									}
+								}
+
+								button {
+									display: block;
+									margin-left: 59%;
+									font-family: 'Monserrat-Regular', Arial, sans-serif;
+									font-size: 8px;
+									height: 40px;
+									width: 40%;
+									text-transform: uppercase;
+									background-color: rgba(0, 0, 0, 0);
+									margin-top: 4%;
+									color: #ffffff;
+								}
+							}
+						} @else {
+							background-color: rgba(0, 0, 0, 0);
+						}
+					}
+				}
+
+				// Большие блоки
+				@else if( $a % 2 == 0 ) {
+					grid-row-start: $a/3+1;
+					grid-row-end: $a/3+2;
+
+					@if( ($a / 2 == 1) or ($a / 2 == 4) or ($a / 2 == 7) ) {
+						grid-column-start: 2;
+						grid-column-end: 4;
+						background-color: #d7d7d7;
+
+					} @else {
+						grid-column-start: 1;
+						grid-column-end: 3;
+						background-color: #282828;
+					}
+				}
+
+				// Малые блоки
+				@else {
+					grid-row-start: $a/3+1;
+	 				grid-row-start: $a/3+2;
+					background-color: #fff;
+
+					font-family: 'Montserrat-Regular', Arial, sans-serif;
+
+					.date {
+						display: block;
+						font-size: 9px;
+						letter-spacing: .5px;
+					}
+					
+					.content {
+						display: block;
+						margin: 0;
+						width: 90%;
+						height: auto;
+						margin-top: 10px;
+						font-size: 12px;
+						letter-spacing: .2px;
+					}
+					
+					.comments {
+						display: block;
+  						position: absolute;
+						margin-left: 1px;
+						font-size: 9px;
+						letter-spacing: .3px;
+						bottom: 19px;
+					}
+
+					@if( $a == 1 or $a == 7 or $a == 13) {
+	 					grid-column-start: 1;
+	 					grid-column-end: 2;
+					} @else {
+						grid-column-start: 2;
+						grid-column-start: 3;
+					}
+				}
+			}
+		}
+	}
+}

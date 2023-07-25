@@ -1,0 +1,37 @@
+footer {
+	display: block;
+	width: 100%;
+	height: 80px;
+	font-family: 'Montserrat-Regular', Arial, sans-serif;
+	font-size: 7.8px;
+	padding: 23px 0 0 2px;
+	font-weight: 1000;
+	letter-spacing: .4px;
+
+	p {
+		display: inline-block;
+		float: left;
+
+		a {
+			text-decoration: none;
+			color: #2297d8; 
+		}
+	}
+
+	div {
+		margin-right: 0px;
+		display: flex;
+		justify-content: space-between;
+		float: right;
+		text-align: right;
+		width: 410px;
+
+		a {
+			text-decoration: none;
+			font-weight: 100;
+			&:hover {
+				color: #2297d8; 
+			}
+		}
+	}
+}
